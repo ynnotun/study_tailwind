@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="box bg-black text-white border-white p-8 active:bg-gray-800"
+        onclick="openModal('안녕', '하세요', `console.log('하하')`)">hi</button>
+    <button class="box bg-black text-white border-white p-8 active:bg-gray-800"
+        onclick="openModal('아름', '다우세요',`alert('대박이지')`)">beautiful</button>
+    <button class="box bg-black text-white border-white p-8 active:bg-gray-800"
+        onclick="openModal('명령어 여러줄', '실행해보겠습니다',`console.log('한줄'); console.log('두줄'); console.log('세줄');`)">여러줄</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./modal.js"></script>
+  </body>
+</html>

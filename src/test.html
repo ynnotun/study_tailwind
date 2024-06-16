@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Document</title>
+
+  </head>
+  <body>
+    <button class="box btn-primary"
+        onclick="openModal('다른 페이지에서도 ', '실행가능해요', `console.log('여기는 다른 페이지')`)">함수만 부르면 쓸 수 있지롱</button>
+    <button class="box2 btn-primary">놀랍게도 이렇게 해도 됨</button>
+    <button class="box3 btn-primary">객체를 사용하는 방법</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./modal.js"></script>
+    <script>
+        $(function () {
+            $(".box2").click(function(){
+                openModal("짜라란 이건 제목", "짜라란 이건 내용", "console.log('WOW~~')");
+            });
+
+
+            const ob = {
+                "title" : "이게 제목입니다.",
+                "content" : "이렇게 객체로 쓰면 편하죠",
+                "func" : `location.href='./insert'`
+            };
+
+            $(".box3").click(function(){
+                openModal(ob.title, ob.content, ob.func);
+            });
+        });
+    </script>
+  </body>
+</html>
